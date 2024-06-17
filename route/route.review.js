@@ -1,5 +1,5 @@
-const Review = require("../models/Review");
-const User = require("../models/User");
+const Review = require("../model/model.review");
+const User = require("../model/model.user");
 const express = require("express");
 
 const router = express.Router();

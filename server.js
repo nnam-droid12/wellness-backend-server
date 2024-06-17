@@ -1,21 +1,19 @@
 const express = require("express");
-const cors = require("cors");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const withAuth = require("./middlewares/auth");
 require("./db/mongoose");
-const user = require("./routes/user");
-const hospital = require("./routes/hospital");
-const review = require("./routes/review");
-const booking = require("./routes/booking");
-const Hospital = require("./models/Hospital");
-const User = require("./models/User");
-const Review = require("./models/Review");
+const user = require("./route/route.user");
+const hospital = require("./route/route.hospital");
+const review = require("./route/route.review");
+const booking = require("./route/route.booking");
+const Hospital = require("./model/model.hospital");
+const User = require("./model/model.user");
+const Review = require("./model/model.review");
 dotenv.config()
 
 const app = express();
 app.use(express.json());
-app.use(cors());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 

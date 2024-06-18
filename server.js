@@ -10,6 +10,8 @@ const booking = require("./route/route.booking");
 const Hospital = require("./model/model.hospital");
 const User = require("./model/model.user");
 const Review = require("./model/model.review");
+const dotenv = require('dotenv');
+
 dotenv.config()
 
 const app = express();

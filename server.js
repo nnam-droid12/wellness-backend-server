@@ -14,6 +14,8 @@ const dotenv = require('dotenv');
 
 dotenv.config()
 
+const port = process.env.PORT || 5000;
+
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
@@ -59,5 +61,5 @@ app.get("/api/", withAuth, function(req, res) {
   res.send("Welcome!");
 });
 
-const port = process.env.PORT || 5000;
+
 app.listen(port, () => console.log(`Wellness app listening on port ${port}!`));

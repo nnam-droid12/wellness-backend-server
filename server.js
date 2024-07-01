@@ -18,9 +18,9 @@ dotenv.config()
 
 const port = process.env.PORT || 5000;
 const corsOptions = {
-     origin: "https://wellness.pipeops.app",
-     methods: "GET, HEAD, PUT, PATCH, POST, DELETE",
-     credentials: true,
+  origin: ["https://wellness.pipeops.app", "http://*.localhost:3000"],
+  methods: "GET, HEAD, PUT, PATCH, POST, DELETE",
+  credentials: true,
 };
 
 const app = express();
